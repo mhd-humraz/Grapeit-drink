@@ -1,6 +1,9 @@
-/* styles.css */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base Styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background: #fffaf5;
   color: #333;
@@ -9,9 +12,16 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background-color: #ff7f50;
   color: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 nav a {
@@ -19,6 +29,13 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ff5722;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .hero {
@@ -29,6 +46,16 @@ nav a {
   color: white;
 }
 
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
 .hero .btn {
   background-color: #ff7f50;
   color: white;
@@ -36,13 +63,24 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 20px;
   display: inline-block;
+}
+
+.hero .btn:hover {
+  background-color: #ff5722;
+  transition: background-color 0.3s ease;
 }
 
 .products, .about, .contact {
   padding: 60px 20px;
   text-align: center;
+}
+
+.products h2,
+.about h2,
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .product-list {
@@ -58,6 +96,29 @@ nav a {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  margin-bottom: 10px;
+  color: #ff7f50;
+}
+
+.product p {
+  font-size: 0.95em;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .contact form {
@@ -75,6 +136,12 @@ nav a {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact textarea {
+  resize: vertical;
+  height: 120px;
 }
 
 .contact button {
@@ -83,6 +150,13 @@ nav a {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #ff5722;
+  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -90,4 +164,45 @@ footer {
   padding: 20px;
   background-color: #ff7f50;
   color: white;
+  font-size: 0.95em;
+}
+
+/* Testimonials (Optional Section) */
+.testimonials {
+  padding: 40px 20px;
+  background: #fff0e6;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
 }
